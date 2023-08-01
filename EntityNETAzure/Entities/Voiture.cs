@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityNETAzure.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,7 +18,7 @@ namespace EntityNETAzure
         public int Id { get; set; }
 
         [Required]
-        public string Brand { get; set; }
+        public Brand CarBrand { get; set; }
 
         [MinLength(5)]
         [Required]
@@ -27,12 +28,14 @@ namespace EntityNETAzure
         [MinLength(7)]
         public string Plate { get; set; }
 
-        [Required]
-        public Person Driver { get; set; }
+       
 
         [Required]
         [Range(0, 1500)]
         public int Hp { get; set; }
+
+
+        public List<Person> Drivers { get; set; }
 
     }
 }

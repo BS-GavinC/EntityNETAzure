@@ -5,30 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityNETAzure
+namespace EntityNETAzure.Entities
 {
     internal class Person
     {
-        public Person()
-        {
-            Name = null;
-        }
 
         public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        [Required]
-        public string Prenom { get; set; }
 
-        [Required]
-        public string Pseudo { get; set; }
-
-
-        public int? DriverLicense { get; set; }
-     
+        public List<Voiture> Cars { get; set; }
     }
-
-    
 }
